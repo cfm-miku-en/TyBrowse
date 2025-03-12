@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tybrowse - The Private Browser</title>
+    <script src="https://unpkg.com/twemoji@13.1.0/dist/twemoji.min.js"></script>
+    <style>
+        :root {
+            --primary: #2A2A2A;
+            --accent: #6C63FF;
+            --text: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--accent), #FF6B6B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .earth-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: url('https://www.shareicon.net/download/2015/05/19/41007_earth.ico') no-repeat center;
+            background-size: contain;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            transform: translateY(50px);
+            animation: slideUp 0.8s ease-out forwards;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeIn 1s 0.5s forwards;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent), #FF6B6B);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s 1s forwards;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 200px auto;
+            padding: 2rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0,0,0,0.3);
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .emoji {
+            height: 1.2em;
+            vertical-align: middle;
+        }
+
+        .firefox-diss {
+            color: #FF6B6B;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+        }
+
+        .oss-badge {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            z-index: 999;
+        }
+
+        .oss-badge a {
+            color: var(--accent);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .oss-badge a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ty🦊Browse</div>
+            <div class="nav-links">
+                <a href="https://github.com/Tyepiece/Tybrowse" target="_blank" class="github-link">GitHub</a>
+            </div>
+        </nav>
+        <!-- Earth Icon -->
+        <div class="earth-icon"></div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Browse Like Nobody's Watching 👀</h1>
+                <p class="tagline">Zero tracking • No Terms • Complete Freedom</p>
+                <a href="https://github.com/Tyepiece/Tybrowse/releases/download/alpha1.7.0/tybrowsei.exe" class="download-btn" download>
+                    Download TyBrowse 🌟
+                </a>
+                
+                <p class="firefox-diss">
+                    Sick of Firefox's broken promises? <br>
+                    We don't do shady TOU or privacy-invading nonsense. Ever.
+                </p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="card-grid">
+                <div class="card">
+                    <h2>🛡️ No Tracking</h2>
+                    <p>Unlike some browsers, we don't sneak data to anyone.</p>
+                </div>
+                <div class="card">
+                    <h2>🔓 No TOU Trap</h2>
+                    <p>Free software should mean free from legal trickery.</p>
+                </div>
+                <div class="card">
+                    <h2>💻 Open Source</h2>
+                    <p>You're welcome to inspect every line of code.</p>
+                </div>
+                <div class="card">
+                    <h2>🔒 No Malware</h2>
+                    <p>Our browser is completely safe. No malware, guaranteed.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="oss-badge">
+            <a href="https://github.com/Tyepiece/Tybrowse" target="_blank">Check out our Open Source Code on GitHub</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Crafted with ❤️ by M I K U & Wawa Cat</p>
+        <br>
+        <small>No data collection • No tracking • No corporate nonsense</small>
+        <br><br>
+        <a href="https://www.mozilla.org/en-US/about/legal/terms/firefox/" target="_blank">Mozilla's Terms of Use</a> (not here!)
+    </footer>
+</body>
+</html>
