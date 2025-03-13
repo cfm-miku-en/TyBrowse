@@ -47,20 +47,15 @@
         .logo {
             font-size: 2rem;
             font-weight: bold;
-            background: linear-gradient(45deg, var(--accent), #FF6B6B);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
+            background: none; /* Remove the gradient */
+            display: inline-flex;
+            align-items: center;
         }
 
-        .earth-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
-            background: url('https://www.shareicon.net/download/2015/05/19/41007_earth.ico') no-repeat center;
-            background-size: contain;
+        .logo img {
+            width: 30px; /* Adjust size of the icon */
+            height: 30px; /* Adjust size of the icon */
+            margin-right: 10px; /* Space between icon and text */
         }
 
         .hero {
@@ -186,13 +181,14 @@
     <header>
         <nav>
             <!-- Logo with Earth icon -->
-            <div class="logo">Ty🌍Browse</div>
+            <div class="logo">
+                <img src="https://www.shareicon.net/download/2015/05/19/41007_earth.ico" alt="Earth Icon">
+                TyBrowse
+            </div>
             <div class="nav-links">
                 <a href="https://github.com/Tyepiece/Tybrowse" target="_blank" class="github-link">GitHub</a>
             </div>
         </nav>
-        <!-- Earth Icon -->
-        <div class="earth-icon"></div>
     </header>
 
     <main>
