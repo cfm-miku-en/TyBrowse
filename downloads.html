@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tybrowse Downloads</title>
+    <script src="https://unpkg.com/twemoji@13.1.0/dist/twemoji.min.js"></script>
+    <style>
+        :root {           
+            --primary: #2A2A2A;
+            --accent: #6C63FF;
+            --text: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 5rem 2rem;
+        }
+
+        .version-info {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .version-info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .download-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent), #FF6B6B);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.shareicon.net/download/2015/05/19/41007_earth.ico" alt="Earth Icon">
+                TyBrowse
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="downloads.html">Downloads</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="version-info">
+            <h2>Version 1.7 - Discontinued (Not Recommended)</h2>
+            <p><strong>Description:</strong> First TyBrowse version to go public. It’s a bare-bones browser without a configuration interface. It's an alpha release and not recommended for production use. This version has no configuration and is prone to bugs.</p>
+            <a href="https://github.com/Tyepiece/Tybrowse/releases/download/alpha1.7.0/tybrowsei.exe" class="download-btn" download>
+                Download TyBrowse 1.7 (EXE)
+            </a>
+        </section>
+
+        <section class="version-info">
+            <h2>Version 2.0.0 - Alpha (Newest Version)</h2>
+            <p><strong>Description:</strong> The latest alpha version with several improvements over version 1.7. This version includes a configuration interface, history tracking, faster boot times, better HTML rendering capabilities, and other optimizations. Still in the alpha phase, but it’s much more stable than 1.7.</p>
+            <a href="https://github.com/Tyepiece/Tybrowse/releases/download/alpha2.0.0/setup_tybrowse_alpha_2_0_0.exe" class="download-btn" download>
+                Download TyBrowse 2.0.0 (EXE)
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Crafted with ❤️ by M I K U & Wawa Cat</p>
+    </footer>
+</body>
+</html>
