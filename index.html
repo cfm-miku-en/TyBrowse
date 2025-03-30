@@ -6,7 +6,7 @@
     <title>Tybrowse - The Private Browser</title>
     <script src="https://unpkg.com/twemoji@13.1.0/dist/twemoji.min.js"></script>
     <style>
-        :root {
+        :root {           
             --primary: #2A2A2A;
             --accent: #6C63FF;
             --text: #FFFFFF;
@@ -58,6 +58,17 @@
             margin-right: 10px; /* Space between icon and text */
         }
 
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
         .hero {
             height: 100vh;
             display: flex;
@@ -85,7 +96,8 @@
             animation: fadeIn 1s 0.5s forwards;
         }
 
-        .download-btn {
+        .download-btn,
+        .download-portable-btn {
             display: inline-block;
             padding: 1rem 2rem;
             background: linear-gradient(45deg, var(--accent), #FF6B6B);
@@ -98,7 +110,8 @@
             animation: fadeIn 1s 1s forwards;
         }
 
-        .download-btn:hover {
+        .download-btn:hover,
+        .download-portable-btn:hover {
             transform: scale(1.05) rotate(-2deg);
         }
 
@@ -175,17 +188,24 @@
         .oss-badge a:hover {
             text-decoration: underline;
         }
+
+        .hash-container {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <!-- Logo with Earth icon -->
             <div class="logo">
                 <img src="https://www.shareicon.net/download/2015/05/19/41007_earth.ico" alt="Earth Icon">
                 TyBrowse
             </div>
             <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="downloads.html">Downloads</a>
                 <a href="https://github.com/Tyepiece/Tybrowse" target="_blank" class="github-link">GitHub</a>
             </div>
         </nav>
@@ -196,14 +216,21 @@
             <div class="hero-content">
                 <h1>Browse Like Nobody's Watching 👀</h1>
                 <p class="tagline">Zero tracking • No Terms • Complete Freedom</p>
-                <a href="https://github.com/Tyepiece/Tybrowse/releases/download/alpha2.0.0/Tybrowse.2.0.0-alpha.zip" class="download-btn" download>
-                    Download TyBrowse 🌟
+                <a href="https://github.com/Tyepiece/Tybrowse/releases/download/alpha2.0.0/setup_tybrowse_alpha_2_0_0.exe" class="download-btn" download>
+                    Download TyBrowse EXE 🌟
+                </a>
+                <a href="https://github.com/Tyepiece/Tybrowse/releases/download/alpha2.0.0/Tybrowse.2.0.0-alpha.zip" class="download-portable-btn" download>
+                    Download Portable ZIP
                 </a>
                 
                 <p class="firefox-diss">
                     Sick of Firefox's broken promises? <br>
                     We don't do shady TOU or privacy-invading nonsense. Ever.
                 </p>
+                <!-- SHA256 Hash Display -->
+                <div class="hash-container">
+                    <p><strong>SHA256 Hash:</strong> 00b59270b7500c7d2c92cc220ef4bdf9a215b25d90e86d619aa389299248b65e</p>
+                </div>
             </div>
         </section>
 
